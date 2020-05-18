@@ -1,4 +1,5 @@
-# Foundarions of Algorithms
-Following the practices of "Foundarions of Algorithms"
+# Foundations of Algorithms
+
+Following the book "Foundations of Algorithms" & practice in Ruby
 
 Loading...
