@@ -1,5 +1,6 @@
 # Recursion
 =begin
+
 def fib(n)
   if n==1
     1
@@ -10,6 +11,7 @@ def fib(n)
   end
 end
 
+# the better one
 def fib(n)
   if n<=1
     n
@@ -17,6 +19,7 @@ def fib(n)
     fib(n-1)+fib(n-2)
   end
 end
+
 =end
 
 # Iteration
