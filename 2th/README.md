@@ -1,4 +1,4 @@
-# 2th [divide & conquer]
+# 2nd [divide & conquer]
 
 **二分查找 递归**
 
