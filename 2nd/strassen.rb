@@ -1,4 +1,5 @@
 =begin
+# 使用标准矩阵算法以检测结果
 # a[0].length = b.length
 
 a = [[2,3],[4,1]]
@@ -22,7 +23,7 @@ b = [[8,9,1,2],[3,4,5,6],[7,8,9,1],[2,3,4,5]]
 # a = [[2,3],[4,1]]
 # b = [[5,7],[6,8]]
 
-
+# 同阶NxN矩阵相加
 def matrix_add(matrix_a, matrix_b)
 
   matrix = Array.new(matrix_a.length){Array.new(matrix_a.length)}
@@ -34,6 +35,7 @@ def matrix_add(matrix_a, matrix_b)
   matrix
 end
 
+# 同阶NxN矩阵相减
 def matrix_minus(matrix_a, matrix_b)
   
   matrix = Array.new(matrix_a.length){Array.new(matrix_a.length)}
