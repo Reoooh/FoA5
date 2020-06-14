@@ -31,3 +31,8 @@
 **Strassen矩阵乘法**
 
 > strassen
+
+> strassen_rebuild
+>
+> > require 'matrix'
+
