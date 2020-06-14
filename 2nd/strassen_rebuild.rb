@@ -101,20 +101,20 @@ def strassen(matrix_a, matrix_b)
     b22 = disassemble_2_2(matrix_b)
     
     # Strassen方法计算C=A*B
-    m1  = strassen((a11+a22), (b11+b22))
-    m2  = strassen((a21+a22), (b11))
-    m3  = strassen((a11), (b12-b22))
-    m4  = strassen((a22), (b21-b11))
-    m5  = strassen((a11+a12), (b22))
-    m6  = strassen((a21-a11), (b11+b12))
-    m7  = strassen((a12-a22), (b21+b22))
+    m1  = strassen(a11+a22, b11+b22)
+    m2  = strassen(a21+a22, b11)
+    m3  = strassen(a11, b12-b22)
+    m4  = strassen(a22, b21-b11)
+    m5  = strassen(a11+a12, b22)
+    m6  = strassen(a21-a11, b11+b12)
+    m7  = strassen(a12-a22, b21+b22)
     
     c11 = m1+m4-m5+m7
     c12 = m3+m5
     c21 = m2+m4
     c22 = m1+m3-m2+m6
     
-    c   = assemble(c11,c12,c21,c22)
+    c   = assemble(c11, c12, c21, c22)
     c
   end
 end
