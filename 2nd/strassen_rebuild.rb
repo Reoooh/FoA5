@@ -2,7 +2,7 @@ require 'matrix'
 # doc: https://ruby-doc.org/stdlib-2.7.1/libdoc/matrix/rdoc/index.html
 
 # Matrix对象无法使用 length&size 方法
-# 由于 Matrix.rank 方法会产生错误结果因此自行编写 size 方法
+# 因此自行编写 size 方法
 def matrix_size(input_matrix)
   
   matrixsize = 0
