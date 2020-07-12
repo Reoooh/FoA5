@@ -1,4 +1,4 @@
-# Basis
+# 1st [algorithm basis]
 
 **顺序查找**
 
