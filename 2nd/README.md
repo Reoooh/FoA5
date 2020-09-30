@@ -2,7 +2,7 @@
 
 **二分查找 递归**
 
-> binsearch_recursion
+`binsearch_recursion`
 
 > 将取值会在递归调用中变化的变量设为递归例程的参数：
 >
@@ -16,23 +16,23 @@
 
 **合并排序**
 
-> mergesort
->
-> > *merge*两路合并表示将两个有序数组合并为一个有序数组
+`mergesort`
 
-> mergesort_inplace
->
-> > 原地排序使用的空间仅限于输入内容的存储空间，调用*merge*时不会创建数组的第二副本
+> *merge*两路合并表示将两个有序数组合并为一个有序数组
+
+`mergesort_inplace`
+
+> 原地排序使用的空间仅限于输入内容的存储空间，调用*merge*时不会创建数组的第二副本
 
 **快速排序**
 
-> quicksort
+`quicksort`
 
 **Strassen矩阵乘法**
 
-> strassen
+`strassen`
 
-> strassen_rebuild
->
-> > require 'matrix'
+`strassen_rebuild`
+
+> require 'matrix'
 
