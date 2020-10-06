@@ -6,10 +6,13 @@ Following the book *Foundations of Algorithms 5th Edition*
 >
 > The revised and updated *Fifth Edition* features an all-new chapter on genetic algorithms and genetic programming, including approximate solutions to the traveling salesperson problem, an algorithm for an artificial ant that navigates along a trail of food, and an application to financial trading. With fully updated exercises and examples throughout and improved instructor resources including complete solutions, an Instructor’s Manual and Lecture Slides, ***Foundations of Algorithms*** is an essential text for undergraduate and graduate courses in the design and analysis of algorithms.
 
+This project aims to learn basic algorithms knowledge through this book and and practice in [**Ruby**](https://www.ruby-lang.org/ja/).
+
 ## about the author
 
 Richard E. Neapolitan
 
-> **Richard Eugene Neapolitan** was an American scientist. Neapolitan is most well-known for his role in establishing the use of [probability theory](https://en.wikipedia.org/wiki/Probability_theory) in [artificial intelligence](https://en.wikipedia.org/wiki/Artificial_intelligence) and in the development of the field [Bayesian networks](https://en.wikipedia.org/wiki/Bayesian_network).[[1\]](https://en.wikipedia.org/wiki/Richard_Neapolitan#cite_note-dawn3-1)
+> [**Richard Eugene Neapolitan**](https://en.wikipedia.org/wiki/Richard_Neapolitan) was an American scientist. Neapolitan is most well-known for his role in establishing the use of probability theory in artificial intelligence and in the development of the field Bayesian networks.
 
 Loading...
+
