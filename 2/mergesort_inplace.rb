@@ -17,7 +17,7 @@ def merge(low, mid, high)
   if i > mid
     array_u[k..high] = $array_s[j..high]
   else
-    array_u[k..high] = $array_s[i..high]
+    array_u[k..high] = $array_s[i..mid]
   end
 
   $array_s[low..high] = array_u[low..high]
@@ -25,12 +25,12 @@ end
 
 def mergesort(low, high)
   if low < high
-    mid = (low+high)/2
+    mid = (low + high) / 2
     mergesort(low, mid)
-    mergesort(mid+1, high)
+    mergesort(mid + 1, high)
     merge(low, mid, high)
   end
 end
 
 $array_s = [27, 10, 12, 20, 25, 13, 15, 22]
-p mergesort(0, $array_s.size-1)
+p mergesort(0, $array_s.size - 1)
