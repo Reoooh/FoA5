@@ -1,32 +1,26 @@
-$S = [27, 10, 12, 20, 25, 13, 15, 22]
-
 def merge(low, mid, high)
-  u = Array.new(high+1)
+  array_u = Array.new(high+1)
   i,k = low,low
   j = mid + 1
 
   while i <= mid && j <= high
-    if $S[i] < $S[j]
-      u[k] = $S[i]
+    if $array_s[i] < $array_s[j]
+      array_u[k] = $array_s[i]
       i += 1
     else
-      u[k] = $S[j]
+      array_u[k] = $array_s[j]
       j += 1
     end
     k += 1
   end
+
   if i > mid
-    $S[j..high].each do |n|
-      u[k] = n
-      k += 1
-    end
+    array_u[k..high] = $array_s[j..high]
   else
-    $S[i..mid].each do |n|
-      u[k] = n
-      k += 1
-    end
+    array_u[k..high] = $array_s[i..high]
   end
-  $S[low..high] = u[low..high]
+
+  $array_s[low..high] = array_u[low..high]
 end
 
 def mergesort(low, high)
@@ -38,4 +32,5 @@ def mergesort(low, high)
   end
 end
 
-p mergesort(0, $S.size-1)
+$array_s = [27, 10, 12, 20, 25, 13, 15, 22]
+p mergesort(0, $array_s.size-1)
