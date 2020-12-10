@@ -25,7 +25,6 @@ def merge(array_u, array_v)
 end
 
 def mergesort(s)
-
   return s if s.length <= 1
 
   left  = s.take(s.size/2)
