@@ -1,29 +1,4 @@
-# frozen_string_literal: true
-
-=begin
-# 使用标准矩阵算法以检测结果
-# a[0].length = b.length
-
-a = [[2,3],[4,1]]
-b = [[5,7],[6,8]]
-#c = Array.new(a.length, Array.new(b[0].length, 0))
-c = Array.new(a.length){Array.new(b[0].length, 0)}
-p c
-
-for i in 0..(a.length-1)
-  for j in 0..(b[0].length-1)
-    b.length.times do |k|
-      c[i][j] += a[i][k]*b[k][j]
-    end
-  end
-end
-p c
-=end
-
-a = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 1, 2, 3], [4, 5, 6, 7]]
-b = [[8, 9, 1, 2], [3, 4, 5, 6], [7, 8, 9, 1], [2, 3, 4, 5]]
-# a = [[2,3],[4,1]]
-# b = [[5,7],[6,8]]
+# Strassen矩阵乘法适用于可以分别划分为四个子矩阵的大型矩阵
 
 # 同阶NxN矩阵相加
 def matrix_add(matrix_a, matrix_b)
@@ -58,10 +33,6 @@ def matrix_multiply(matrix_a, matrix_b)
   matrix
 end
 
-# p matrix_add(a,b)
-# p matrix_minus(a,b)
-# p matrix_multiply([[2]],[[3]])
-
 # 合并四个NxN矩阵
 def matrix_combine(matrix_a, matrix_b, matrix_c, matrix_d)
   matrix = Array.new(matrix_a.length * 2) { Array.new(matrix_a.length * 2) }
@@ -87,9 +58,6 @@ def matrix_combine(matrix_a, matrix_b, matrix_c, matrix_d)
   end
   matrix
 end
-
-# p matrix_combine([[1]],[[2]],[[3]],[[4]])
-# p matrix_combine([[2,3],[4,1]],[[5,7],[6,8]],[[5,7],[6,8]],[[2,3],[4,1]])
 
 def strassen(matrix_a, matrix_b)
   if matrix_a.length <= 1
@@ -163,11 +131,8 @@ def strassen(matrix_a, matrix_b)
     c = matrix_combine(c11, c12, c21, c22)
     c
   end
-  # p a11,a12,a21,a22
-  # p b11,b12,b21,b22
 end
 
+a = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 1, 2, 3], [4, 5, 6, 7]]
+b = [[8, 9, 1, 2], [3, 4, 5, 6], [7, 8, 9, 1], [2, 3, 4, 5]]
 p strassen(a, b)
-
-# the better one
-# require 'matrix'
