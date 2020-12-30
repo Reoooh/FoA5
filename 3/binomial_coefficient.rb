@@ -21,7 +21,6 @@ def bin2(n, k)
     end
   end
 
-  b[0][0] = 0
   b[n][k]
 end
 
