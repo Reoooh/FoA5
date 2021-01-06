@@ -3,7 +3,8 @@ adjacency_matrix = [[0, 1, infinite, 1, 5], [9, 0, 3, 2, infinite], [infinite, i
 
 def floyd(w)
   n = w.size - 1
-  d = w
+  d = []
+  w.each { |n| d << n.clone }
 
   (0..n).each do |k|
     (0..n).each do |i|
@@ -16,4 +17,25 @@ def floyd(w)
   d
 end
 
+def floyd2(w)
+  n = w.size - 1
+  p = Array.new(n + 1) { Array.new(n + 1) { 0 } }
+  d = []
+  w.each { |n| d << n.clone }
+
+  (0..n).each do |k|
+    (0..n).each do |i|
+      (0..n).each do |j|
+        if d[i][k] + d[k][j] < d[i][j]
+          p[i][j] = k + 1
+          d[i][j] = d[i][k] + d[k][j]
+        end
+      end
+    end
+  end
+
+  p
+end
+
 p floyd(adjacency_matrix)
+p floyd2(adjacency_matrix)
