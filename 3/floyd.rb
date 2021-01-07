@@ -1,7 +1,3 @@
-infinite = Float::INFINITY
-adjacency_matrix = [[0, 1, infinite, 1, 5], [9, 0, 3, 2, infinite], [infinite, infinite, 0, 4, infinite], [infinite, infinite, 2, 0, 3], [3, infinite, infinite, infinite, 0]]
-$p = [[0, 0, 4, 0, 4], [5, 0, 0, 0, 4], [5, 5, 0, 0, 4], [5, 5, 0, 0, 0], [0, 1, 4, 1, 0]]
-
 def floyd(w)
   n = w.size - 1
   d = []
@@ -46,7 +42,10 @@ def path(q, r)
   end
 end
 
+infinite = Float::INFINITY
+adjacency_matrix = [[0, 1, infinite, 1, 5], [9, 0, 3, 2, infinite], [infinite, infinite, 0, 4, infinite], [infinite, infinite, 2, 0, 3], [3, infinite, infinite, infinite, 0]]
 p floyd(adjacency_matrix)
 p floyd2(adjacency_matrix)
 
+$p = [[0, 0, 4, 0, 4], [5, 0, 0, 0, 4], [5, 5, 0, 0, 4], [5, 5, 0, 0, 0], [0, 1, 4, 1, 0]]
 path(5, 3)
