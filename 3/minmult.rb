@@ -19,5 +19,20 @@ def minmult(array_d)
   p matrix_p
 end
 
+def order(i, j)
+  if i == j
+    print "A#{i}"
+  else
+    k = $P[i - 1][j - 1]
+    print '('
+    order(i, k)
+    order(k + 1, j)
+    print ')'
+  end
+end
+
 d = [5, 2, 3, 4, 6, 7, 8]
 minmult(d)
+
+$P = [[nil, 1, 1, 1, 1, 1], [nil, nil, 2, 3, 4, 5], [nil, nil, nil, 3, 4, 5], [nil, nil, nil, nil, 4, 5], [nil, nil, nil, nil, nil, 5]]
+order(1, 6)
