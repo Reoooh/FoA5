@@ -1,7 +1,8 @@
 def minmult(array_d)
   n = array_d.size - 1
-  matrix_m = Array.new(n) { Array.new(n) { 0 } }
+  matrix_m = Array.new(n) { Array.new(n) }
   matrix_p = Array.new(n - 1) { Array.new(n) }
+  n.times { |i| matrix_m[i][i] = 0 }
 
   (1..n - 1).each do |diagonal|
     (1..n - diagonal).each do |i|
