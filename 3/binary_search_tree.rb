@@ -4,23 +4,22 @@ class NodeType
 
   def initialize(key)
     @key = key
-    @left = nil
-    @right = nil
+    @left, @right = nil, nil
   end
 end
 
 def search(tree, keyin)
   found = false
-  p = tree
+  nodetype_p = tree
 
   until found
-    if p.key == keyin
+    if nodetype_p.key == keyin
       found = true
-      puts "found #{p.key}"
-    elsif keyin < p.key
-      p = p.left
+      puts "found #{nodetype_p.key}"
+    elsif keyin < nodetype_p.key
+      nodetype_p = nodetype_p.left
     else
-      p = p.right
+      nodetype_p = nodetype_p.right
     end
   end
 end
@@ -49,8 +48,20 @@ def optsearchtree(array_p)
     end
   end
 
-  minavg = matrix_a[0][n]
-  minavg
+  matrix_a[0][n]
+end
+
+def tree(i, j)
+  k = $R[i - 1][j]
+
+  if k == 0
+    nil
+  else
+    nodetype_p = NodeType.new($K[k - 1])
+    nodetype_p.left  = tree(i, k - 1)
+    nodetype_p.right = tree(k + 1, j)
+    nodetype_p
+  end
 end
 
 n1 = NodeType.new('Devia')
@@ -70,11 +81,11 @@ n5.right = n7
 
 search(n1, 'Wally')
 
-k1 = NodeType.new('Don')
-k2 = NodeType.new('Isabelle')
-k3 = NodeType.new('Ralph')
-k4 = NodeType.new('Wally')
-
 probability = [3/8r, 3/8r, 1/8r, 1/8r]
 
 p optsearchtree(probability)
+
+$R = [[0, 1, 1, 2, 2], [nil, 0, 2, 2, 2], [nil, nil, 0, 3, 3], [nil, nil, nil, 0, 4], [nil, nil, nil, nil, 0]]
+$K = %w[Don Isabelle Ralph Wally]
+
+p tree(1, $K.length)
