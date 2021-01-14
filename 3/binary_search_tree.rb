@@ -16,7 +16,7 @@ def search(tree, keyin)
     if nodetype_p.key == keyin
       found = true
       puts "found #{nodetype_p.key}"
-    elsif keyin < nodetype_p.key # 字符编码顺序决定字符串的大小
+    elsif keyin < nodetype_p.key  # 字符编码顺序决定字符串的大小
       nodetype_p = nodetype_p.left
     else
       nodetype_p = nodetype_p.right
@@ -44,7 +44,7 @@ def optsearchtree(array_p)
       minimum = {}
       (i..j).each { |k| minimum[k] = matrix_a[i - 1][k - 1] + matrix_a[k][j] + array_p[i - 1..j - 1].sum }
       matrix_a[i - 1][j] = minimum.values.min
-      matrix_r[i - 1][j] = minimum.key(matrix_a[i - 1][j]) # 取最小k
+      matrix_r[i - 1][j] = minimum.key(matrix_a[i - 1][j])  # 取最小k值
     end
   end
 
