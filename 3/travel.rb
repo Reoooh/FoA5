@@ -52,11 +52,11 @@ def path(hash_p)
   array_v.delete(point)
 
   (n - 1).times do
-    point = hash_p[point][(array_v).to_s]
+    point = hash_p[point][array_v.to_s]
     best_path << "v#{point}"
     array_v.delete(point)
   end
-  best_path << "v1"
+  best_path << 'v1'
   p best_path
 end
 
