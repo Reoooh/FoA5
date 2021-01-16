@@ -42,6 +42,27 @@ def travel(matrix_w)
   p hash_p
 end
 
+def path(hash_p)
+  n = hash_p.size
+  array_v = hash_p.keys
+  best_path = []
+  point = 1
+
+  best_path << "v#{point}"
+  array_v.delete(point)
+
+  (n - 1).times do
+    point = hash_p[point][(array_v).to_s]
+    best_path << "v#{point}"
+    array_v.delete(point)
+  end
+  best_path << "v1"
+  p best_path
+end
+
 infinite = Float::INFINITY
 adjacency_matrix = [[0, 2, 9, infinite], [1, 0, 6, 4], [infinite, 7, 0, 8], [6, 3, infinite, 0]]
 travel(adjacency_matrix)
+
+P = {1=>{"[2, 3, 4]"=>3}, 2=>{"[3]"=>3, "[4]"=>4, "[3, 4]"=>3}, 3=>{"[2]"=>2, "[4]"=>4, "[2, 4]"=>4}, 4=>{"[2]"=>2, "[3]"=>3, "[2, 3]"=>2}}
+path(P)
