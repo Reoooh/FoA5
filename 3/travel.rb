@@ -1,8 +1,8 @@
 def travel(matrix_w)
   n = matrix_w.size
-  array_v = (1..n).to_a
+  array_v = (1..n).to_a # 所有顶点的集合
 
-  array_a = [[]]
+  array_a = [[]] # array_v的子集
   array_v.each do |x|
     array_a.size.times do |y|
       array_a << (array_a[y] + [x])
@@ -11,8 +11,8 @@ def travel(matrix_w)
   array_a.delete([])
   array_a.each { |m| array_a.delete(m) if m.include?(1) }
 
-  hash_d = {}
-  hash_p = {}
+  hash_d = {} # 最短路径的长度
+  hash_p = {} # 最短路径的索引
   array_v.each { |k| hash_d.store(k, {}) }
   array_v.each { |v| hash_p.store(v, {}) }
 
@@ -29,17 +29,16 @@ def travel(matrix_w)
         end
 
         hash_d[i][a.to_s] = minimum.values.min
-        hash_p[i][a.to_s] = minimum.key(hash_d[i][a.to_s])
+        hash_p[i][a.to_s] = minimum.key(hash_d[i][a.to_s]) # 取最小j值
       end
     end
   end
-  minimum = {}
+  minimum = {} # 最终计算最优旅程长度
   (array_v - [1]).each { |j| minimum[j] = matrix_w[0][j - 1] + hash_d[j][(array_v - [1] - [j]).to_s] }
   hash_d[1][(array_v - [1]).to_s] = minimum.values.min
   hash_p[1][(array_v - [1]).to_s] = minimum.key(hash_d[1][(array_v - [1]).to_s])
 
-  p hash_d
-  p hash_p
+  minlength = hash_d[1][(array_v - [1]).to_s]
 end
 
 def path(hash_p)
@@ -57,12 +56,12 @@ def path(hash_p)
     array_v.delete(point)
   end
   best_path << 'v1'
-  p best_path
+  best_path
 end
 
 infinite = Float::INFINITY
 adjacency_matrix = [[0, 2, 9, infinite], [1, 0, 6, 4], [infinite, 7, 0, 8], [6, 3, infinite, 0]]
-travel(adjacency_matrix)
+p travel(adjacency_matrix)
 
 P = {1=>{"[2, 3, 4]"=>3}, 2=>{"[3]"=>3, "[4]"=>4, "[3, 4]"=>3}, 3=>{"[2]"=>2, "[4]"=>4, "[2, 4]"=>4}, 4=>{"[2]"=>2, "[3]"=>3, "[2, 3]"=>2}}
-path(P)
+p path(P)
