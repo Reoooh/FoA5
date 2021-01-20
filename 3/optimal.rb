@@ -2,9 +2,9 @@ def opt(i, j)
   m = $x.size
   n = $y.size
 
-  if i == m - 1
+  if i == m
     return 2 * (n - j)
-  elsif j == n - 1
+  elsif j == n
     return 2 * (m - i)
   else
     if $x[i] == $y[j]
