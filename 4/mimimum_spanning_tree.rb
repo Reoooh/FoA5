@@ -1,5 +1,5 @@
 def prim(array_w)
-  array_f = []
+  array_f  = []
   nearest  = []
   distance = []
   n = array_w.length
