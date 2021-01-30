@@ -1,4 +1,3 @@
-# prim
 def prim(array_w)
   array_f  = []
   nearest  = []
@@ -35,28 +34,12 @@ def prim(array_w)
   array_f
 end
 
-# kruskal
-def initial(n)
-  Array(0..n - 1)
-end
-
-def find(i, u)
-  j = i
-  j = u[j] while u[j] != j
-  j
-end
-
-def merge(set_pointer_p, set_pointer_q, u)
-  if set_pointer_p < set_pointer_q
-    u[set_pointer_q] = set_pointer_p
-  else
-    u[set_pointer_p] = q
-  end
-end
-
 def kruskal(array_w)
   n = array_w.length
+  array_u = Array(0..n - 1)
   array_m = []
+  array_f = []
+
   (0..n - 1).each do |i|
     (i + 1..n - 1).each do |j|
       array_m << [array_w[i][j], [i, j]] if array_w[i][j] != Float::INFINITY
@@ -64,9 +47,6 @@ def kruskal(array_w)
   end
   array_m.sort!
 
-  array_u = initial(n)
-
-  array_f = []
   while array_f.length < n - 1
     e = array_m[0]
     i = e[1][0]
@@ -81,6 +61,20 @@ def kruskal(array_w)
   end
 
   array_f
+end
+
+def find(i, u)
+  j = i
+  j = u[j] while u[j] != j
+  j
+end
+
+def merge(set_pointer_p, set_pointer_q, u)
+  if set_pointer_p < set_pointer_q
+    u[set_pointer_q] = set_pointer_p
+  else
+    u[set_pointer_p] = q
+  end
 end
 
 infinite = Float::INFINITY
