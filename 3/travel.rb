@@ -39,6 +39,7 @@ def travel(matrix_w)
   hash_p[1][(array_v - [1]).to_s] = minimum.key(hash_d[1][(array_v - [1]).to_s])
 
   minlength = hash_d[1][(array_v - [1]).to_s]
+  minlength
 end
 
 def path(hash_p)
