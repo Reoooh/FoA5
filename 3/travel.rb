@@ -39,7 +39,7 @@ def travel(matrix_w)
   hash_p[1][(array_v - [1]).to_s] = minimum.key(hash_d[1][(array_v - [1]).to_s])
 
   minlength = hash_d[1][(array_v - [1]).to_s]
-  minlength
+  p minlength
 end
 
 def path(hash_p)
@@ -62,7 +62,8 @@ end
 
 infinite = Float::INFINITY
 adjacency_matrix = [[0, 2, 9, infinite], [1, 0, 6, 4], [infinite, 7, 0, 8], [6, 3, infinite, 0]]
-p travel(adjacency_matrix)
+travel(adjacency_matrix)
 
-P = {1=>{"[2, 3, 4]"=>3}, 2=>{"[3]"=>3, "[4]"=>4, "[3, 4]"=>3}, 3=>{"[2]"=>2, "[4]"=>4, "[2, 4]"=>4}, 4=>{"[2]"=>2, "[3]"=>3, "[2, 3]"=>2}}
+P = { 1 => { '[2, 3, 4]' => 3 }, 2 => { '[3]' => 3, '[4]' => 4, '[3, 4]' => 3 }, 3 => { '[2]' => 2, '[4]' => 4, '[2, 4]' => 4 },
+      4 => { '[2]' => 2, '[3]' => 3, '[2, 3]' => 2 } }.freeze
 p path(P)
