@@ -11,11 +11,9 @@ def schedule(array_d)
     array_k.each { |j| feasibility_check << [j, array_d[j - 1]] }
     feasibility_check.sort! { |x, y| x[1] <=> y[1] }
 
-    easibility = true
-    feasibility_check.length.times do |m|
-      easibility = false if m + 1 > feasibility_check[m][1]
-    end
-    if easibility
+    feasible = true
+    feasibility_check.length.times { |m| feasible = false if m + 1 > feasibility_check[m][1] }
+    if feasible
       array_j.clear
       feasibility_check.each { |k| array_j << k[0] }
     end
