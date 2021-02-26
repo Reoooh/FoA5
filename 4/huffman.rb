@@ -37,25 +37,5 @@ def huffman(array_cs)
   p priority_queue
 end
 
-def huffman_code(codes, node, tag = 'root', code = [])
-    if node != nil
-        if tag == 'left'
-            code << 0
-        elsif tag == 'right'
-            code << 1
-        else
-            code
-        end
-
-        if node.symbol != 'root'
-            codes << "#{node.symbol} : #{code}"
-            code.pop
-        end
-
-        huffman_code(codes, node.left, 'left' , code)
-        huffman_code(codes, node.right,'right', code)
-    end
-end
-
 character_set = [['a', 16], ['b', 5], ['c', 12], ['d', 17], ['e', 10], ['f', 25]]
 huffman(character_set)
