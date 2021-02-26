@@ -1,3 +1,5 @@
+# better one: https://ruby-china.org/topics/29896#reply-295643
+
 class NodeType
   attr_reader :symbol
   attr_accessor :frequency, :left, :right
@@ -34,7 +36,7 @@ def huffman(array_cs)
     priority_queue[location, 0] = nodetype_r
   end
 
-  p priority_queue
+  p priority_queue[0]
 end
 
 character_set = [['a', 16], ['b', 5], ['c', 12], ['d', 17], ['e', 10], ['f', 25]]
