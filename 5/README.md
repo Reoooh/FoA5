@@ -1,2 +1,2 @@
-# 5th [backtracking algorithm]
+# 5th [backtracking]
 
