@@ -24,7 +24,7 @@ def estimate_n_queens(n)
       col[i - 1] = j
     end
   end
-  numnodes
+  puts numnodes
 end
 
 def promising(i, col)
@@ -37,4 +37,4 @@ def promising(i, col)
   switch
 end
 
-p estimate_n_queens(4)
+estimate_n_queens(4)
