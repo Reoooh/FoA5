@@ -15,7 +15,7 @@ def promising(i, weight, total)
   if i < $n - 1
     (weight + total >= $W) & ((weight == $W) | (weight + $w[i + 1] <= $W))
   else
-    (weight + total >= $W) & ((weight == $W) | (weight <= $W))  # 避免超出数组范围产生错误
+    (weight + total >= $W) & (weight == $W) # 避免超出数组范围产生错误
   end
 end
 
