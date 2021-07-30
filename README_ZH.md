@@ -1,6 +1,6 @@
 # FoA5
 
-根据[《算法基础（第五版）》](https://www.ituring.com.cn/book/1535)编写，项目旨在通过本书学习基础算法知识并通过[Ruby](https://www.ruby-lang.org/en/)进行练习。
+根据[《算法基础（第五版）》](https://www.ituring.com.cn/book/1535)编写，项目旨在通过本书学习基础算法知识并通过[Ruby](https://www.ruby-lang.org/zh_cn/)进行练习。
 
 ## 关于本书
 
@@ -18,8 +18,9 @@
 
 ## 关于Ruby
 
-> [**Ruby**](https://zh.wikipedia.org/wiki/Ruby)是一种[面向对象](https://zh.wikipedia.org/wiki/面向对象的程序设计)、[指令式](https://zh.wikipedia.org/wiki/指令式编程)、[函数式](https://zh.wikipedia.org/wiki/函數程式語言)、[动态](https://zh.wikipedia.org/wiki/动态语言)的[通用编程语言](https://zh.wikipedia.org/wiki/通用编程语言)。在20世纪90年代中期由[日本](https://zh.wikipedia.org/wiki/日本)[计算机科学家](https://zh.wikipedia.org/wiki/電腦科學家)[松本行弘](https://zh.wikipedia.org/wiki/松本行弘)（Matz）设计并开发。
+> Ruby是……
+> 一门开源的动态编程语言，注重简洁和效率。Ruby 的句法优雅，读起来自然，写起来舒适。
 
-Ruby直观易读且语法优雅，在学习算法时并不需要分散太多精力在语言本身，使用Ruby学习本书的伪代码样例再合适不过。因此使用Ruby对本书的伪代码进行重写，希望能够最大限度展现作者的算法思想。
+Ruby直观易读且语法优雅，在学习算法时并不需要分散太多精力在语言本身，通过Ruby学习本书的伪代码样例再合适不过。因此使用Ruby对本书的伪代码进行重写，希望能够最大限度展现作者的算法思想。
 
 项目进行中。。。
