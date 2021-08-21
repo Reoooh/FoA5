@@ -35,10 +35,8 @@ $W = [[false, true, true, false, false, false, true, true],
       [false, false, true, false, true, false, true, false],
       [true, true, false, false, false, true, false, true],
       [true, true, false, false, false, false, true, false]]	# adjacency_matrix
-
 $n = $W.size
-$vindex = Array.new($n + 1)
-$vindex[0] = 1
-$vindex[-1] = 1	# 以硬编码方式规定v1作为起始顶点
+$vindex = Array.new($n)
+$vindex[0] = 1  # 以硬编码方式规定v1作为起始顶点
 
 hamiltonian(0)
